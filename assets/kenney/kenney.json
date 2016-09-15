@@ -17,7 +17,7 @@
     "panel": "images/grey_panel.png"
   },
   "fonts": {
-    "minecraftia": ["fonts/font.png", "fonts/font.fnt"]
+    "font": ["fonts/font.png", "fonts/font.fnt"]
   },
   "button": {
     "border-x": 8,
