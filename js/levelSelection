@@ -1,0 +1,57 @@
+function levelSelection() {};
+
+levelSelection.prototype = {
+  create: function() {
+    // add main intro assets into the world
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+    game.world.resize(2400, 600);
+    slickUI.add(panelSelecao=new SlickUI.Element.Panel(0, 0, game.width, game.height));
+    panelSelecao.add(fase1=new SlickUI.Element.Button(45, 70, 200, 200));
+    fase1.add(new SlickUI.Element.DisplayObject(0, 0, game.make.sprite(0, 0, 'min1')));
+    panelSelecao.add(fase2=new SlickUI.Element.Button(290, 70, 200, 200));
+    fase2.add(new SlickUI.Element.DisplayObject(0, 0, game.make.sprite(0, 0, 'min2')));
+    panelSelecao.add(fase3=new SlickUI.Element.Button(535, 70, 200, 200));
+    fase3.add(new SlickUI.Element.DisplayObject(0, 0, game.make.sprite(0, 0, 'min3')));
+    panelSelecao.add(fase4=new SlickUI.Element.Button(45, 290, 200, 200));
+    fase4.add(new SlickUI.Element.DisplayObject(0, 0, game.make.sprite(0, 0, 'min4')));
+    panelSelecao.add(fase5=new SlickUI.Element.Button(535, 290, 200, 200));
+    fase5.add(new SlickUI.Element.DisplayObject(0, 0, game.make.sprite(0, 0, 'min5')));
+    panelSelecao.add(fase6=new SlickUI.Element.Button(290, 290, 200, 200));
+    fase6.add(new SlickUI.Element.DisplayObject(0, 0, game.make.sprite(0, 0, 'min6')));
+    fase6.visible=false;
+    panelSelecao.add(volt=new SlickUI.Element.Button(0, 0, 30, 30));
+    sprite= game.make.sprite(0, 0, 'back');
+    sprite.width=25;
+    sprite.height=25;
+    volt.add(new SlickUI.Element.DisplayObject(0, 0, sprite));
+    volt.events.onInputDown.add(function(){
+        estadoAtual=Estados.MENU;
+      panelSelecao.visible=false;
+    }, this);
+    fase1.events.onInputDown.add(function(){
+        estadoAtual=Estados.JOGANDO1;
+      panelSelecao.visible=false;
+    }, this);
+    fase2.events.onInputDown.add(function(){
+        estadoAtual=Estados.JOGANDO2;
+      panelSelecao.visible=false;
+    }, this);
+    fase3.events.onInputDown.add(function(){
+        estadoAtual=Estados.JOGANDO3;
+      panelSelecao.visible=false;
+    }, this);
+    fase4.events.onInputDown.add(function(){
+        estadoAtual=Estados.JOGANDO4;
+      panelSelecao.visible=false;
+    }, this);
+    fase5.events.onInputDown.add(function(){
+        estadoAtual=Estados.JOGANDO5;
+      panelSelecao.visible=false;
+    }, this);
+    fase6.events.onInputDown.add(function(){
+        estadoAtual=Estados.JOGANDO6;
+      panelSelecao.visible=false;
+    }, this);
+    panelSelecao.visible=false;
+  },
+};

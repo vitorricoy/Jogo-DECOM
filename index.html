@@ -5,45 +5,55 @@
     <title>Jogo do Decom</title>
     <script src="js/phaser.js"></script>
     <script src="js/slick-ui.min.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script type='text/javascript'>
+    	var fases=Array(false, false, false, false, false);
+    	var levelsPossiveis=Array(Array(), Array(), Array(), Array(), Array());
+    	var layer;
+    	var player;
+        var musica=true;
+        var cont=0;
+    </script>
+    <script src="js/preload.js"></script>
+    <script src="js/mainmenu.js"></script>
+    <script src="js/arcade.js"></script>
+    <script src="js/levelSelection.js"></script>
+    <script src="js/creditos.js"></script>
+    <script src="js/playing.js"></script>
+    <script src="js/gameover.js"></script>
+    <script src="js/loadLevel.js"></script>
+    <style>
+        #externa {
+            position: relative;
+            width:100%;
+            height:700px;
+        }
+        #gameDiv{
+            left:50%;
+            top:50%;
+            margin-left:-400px; /* Metade do valor da Largura */
+            margin-top:-300px; /* Metade da valor da Altura */
+            position:absolute;
+            width:800px; /* Valor da Largura */
+            height:600px; /* Valor da Altura */
+        }
+</style>
 </head>
-<body>
+<body id="externa">
 
-<div id="gameContainer"></div>
+<div id="gameDiv""></div>
 
 <script type="text/javascript">
-    var game = new Phaser.Game(800, 600, Phaser.CANVAS, '', { preload: preload, create: create });
-    var slickUI;
-    function preload() {
-        slickUI = game.plugins.add(Phaser.Plugin.SlickUI);
-        game.load.image('backdrop', 'assets/backdrop.png');
-        slickUI.load('assets/kenney/kenney.json');
-        game.load.image('logo', 'assets/logo.png');
-    }
-    function create() {
-        game.add.sprite(0,-125,'backdrop');
-        var panel;
-        slickUI.add(panel = new SlickUI.Element.Panel(8, 8, game.width - 16, game.height - 16));
-        panel.add(new SlickUI.Element.Text(10,10, "Control the image's opacity by moving the slider")).centerHorizontally().text.alpha = 0.5;
-        logo.width=200;
-        logo.heigth=200;
-        panel.add(new SlickUI.Element.DisplayObject((panel.width/2)-logo.width/2, 0, logo));
-
-        var valueText = new SlickUI.Element.Text(0,panel.height - 40, '100%');
-        var slider = new SlickUI.Element.Slider(16,100, game.width - 64);
-        panel.add(slider);
-        panel.add(valueText).centerHorizontally();
-        slider.onDrag.add(function (value) {
-            previewSprite.alpha = value;
-            valueText.value = Math.round(value * 100) + '%';
-            valueText.centerHorizontally();
-        });
-        slider.onDragStart.add(function (value) {
-            console.log('Start dragging at ' + Math.round(value * 100) + '%');
-        });
-        slider.onDragStop.add(function (value) {
-            console.log('Stop dragging at ' + Math.round(value * 100) + '%');
-        });
-    }
+    var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameDiv');
+    game.state.add('preload', Preload);
+    game.state.add('arcade', arcade);
+    game.state.add('levelSelection', levelSelection);
+    game.state.add('mainmenu', mainmenu);
+    game.state.add('creditos', creditos);
+    game.state.add('playing', playing);
+    game.state.add('gameover', gameover);
+    game.state.add('loadLevel', loadLevel);
+    game.state.start('preload');
 </script>
 
 </body>
