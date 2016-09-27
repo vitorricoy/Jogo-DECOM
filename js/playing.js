@@ -168,13 +168,11 @@ var gerada=false;
             game.physics.arcade.enable(item);
             item.width*=0.5;
             item.height*=0.5;
-            item.body.gravity.y=500;
         });
         grpBits.forEach(function(item){
             game.physics.arcade.enable(item);
             item.width*=0.5;
             item.height*=0.5;
-            item.body.gravity.y=500;
             bitsToCollect.push(item);
         });
         players=game.add.group();
