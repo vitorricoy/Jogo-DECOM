@@ -1,6 +1,4 @@
 function playing(){}
-var jumpTimer=Array(0);
-var jumpTimerAll=0;
 var index=0;
 var players;
 var jump;
@@ -11,14 +9,20 @@ var onJump=Array();
 var presentes = Array();
 var bits = Array();
 var bitsToCollect = Array();
+var bitAnterior=-1;
+
 playing.prototype = {
   init: function(lv){
   	level=lv;
     bits = Array(1, 0, 1, 0, 1, 0, 1, 0);
   },
   preload: function(){
+    game.time.advancedTiming = true;
   },
   create: function() {
+  },
+  render: function(){
+    //game.debug.text(game.time.fps || '--', 2, 14, "#00ff00"); 
   },
   update: function(){
     definirJogo();
@@ -27,71 +31,67 @@ playing.prototype = {
     game.physics.arcade.overlap(players, grpBits, encostouBit, null, this);
     game.physics.arcade.overlap(players, spikes, encostouInimigo, null, this);
     game.physics.arcade.overlap(players, virus, encostouInimigo, null, this);
-    players.forEach(function(player) {
-      if(!player.alive){
-        player.destroy();
-      }
-    });
     if(players.children.length<=0){
       game.state.start('gameover', true, false, level);
     }else{
-         let j;
-         for(j=0; j<8; j++){
-            if(!presentes[j]){
-              break;
-            }
-         }
-         
-          for(let i=0; i<bitsToCollect.length; i++){
-            if(bitsToCollect[i].body.x>game.camera.x){
-              bitsToCollect[i].animations.frame=bits[j];
-            }
-          }
+      let j;
+      for(j=0; j<8; j++){
+        if(!presentes[j]){
+          break;
+        }
+      } 
+      if(bitAnterior>=0){
+        if(grpBits.children[bitAnterior].x<camera.x){
+           bitAnterior++;
+           grpBits.children[bitAnterior].animations.frame=bits[j];
+        }
+      }
       game.camera.follow(players.children[0], Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
       if (jumpT.isDown){
           jump();
       }
-      for(i=1; i<players.children.length; i++){
-        if(onJump[i]){
-           if(players.children[i].body.onFloor()){
-             onJump[i]=false;
-           }
-        }else{
-          if(!players.children[i].body.blocked.right && !players.children[i].body.touching.right && players.children[i].body.velocity.x>0){
-            if(players.children[i].body.onFloor())
-               players.children[i].animations.play('walk');
+      var elem1=players.getFirstAlive();
+      var it=0;
+      players.forEachAlive(function(pla) {
+        if(pla!=elem1){
+          if(onJump[it]){
+            if(pla.body.onFloor()){
+              onJump[it]=false;
+            }
+          }else{
+          if(!pla.body.blocked.right && !pla.body.touching.right && pla.body.velocity.x>0){
+            if(pla.body.onFloor())
+               pla.animations.play('walk');
             else{
-               players.children[i].animations.play('jump');
+               pla.animations.play('jump');
+            }  
+          }else{
+              pla.animations.stop(null, true);
+          }
+          pla.body.velocity.x=elem1.body.velocity.x;
+          if(pla.y>600){
+            pla.kill();
+            presentes[it]=false;
+          }
+        }
+      }else{
+        if(!pla.body.blocked.right && !pla.body.touching.right && pla.body.velocity.x>0){
+            if(pla.body.onFloor())
+               pla.animations.play('walk');
+            else{
+               pla.animations.play('jump');
             }  
         }else{
-            players.children[i].animations.stop(null, true);
-          }
-          if(!onJump[i]){
-            players.children[i].body.velocity.x=players.children[0].body.velocity.x;
-          }
-          if(players.children[i].y>600){
-            players.children[i].kill();
-            presentes[i]=false;
-          }
+              pla.animations.stop(null, true);
         }
-      }
-      
-      if(!players.children[0].body.blocked.right && !players.children[0].body.touching.right){
-             
-          if(players.children[0].body.onFloor()){
-               players.children[0].animations.play('walk'); 
-          }else{
-             players.children[0].animations.play('jump');
-          }
-              
-        }else{
-          players.children[0].animations.stop(null, true);
-        }
-        players.children[0].body.velocity.x=250;
-      if(players.children[0].y>600){
+        pla.body.velocity.x=250;
+        if(players.children[0].y>600){
           players.children[0].kill();
           presentes[0]=false;
         }
+      }
+      it++;
+      }, this);
       }
     }
 };
@@ -117,7 +117,7 @@ var gerada=false;
      sprite.body.gravity.y = 500;
      console.log(game.time.now);
      console.log(sprite.body.velocity.y = -502/2);
-     console.log(sprite.body.velocity.x = (-1*52*i)+250);
+     console.log(sprite.body.velocity.x = (-1*52*i)+200);
      onJump[i]=true;
      sprite.animations.add('walk', Phaser.Animation.generateFrameNames('Walk_', 0, 6, '.png'), 10);
      sprite.animations.add('show', Phaser.Animation.generateFrameNames('Show_', 0, 3, '.png'), 2);
@@ -143,7 +143,7 @@ var gerada=false;
     		layer = map.createLayer('fundo');
         layer = map.createLayer('background');
     		layer = map.createLayer('ground');
-    		map.setCollisionBetween(100, 2000, true, layer);
+    		map.setCollisionBetween(0, 999, true, layer);
         layer.resizeWorld();
         spikes = game.add.group();
         spikes.enableBody=true;
@@ -206,21 +206,17 @@ var gerada=false;
         presentes[5]=false;
         presentes[6]=false;
         presentes[7]=false;
-
 		}
 	}
 
   function jump(){
     let cont=0;
     players.forEach(function(player) {
-      if(player.body.onFloor() && game.time.now > jumpTimerAll){
+      if(player.body.onFloor()){
          setTimeout(function(){ player.body.velocity.y = -300; }, 300*cont);
       }
       cont++;
-    });
-     
-    jumpTimerAll = game.time.now + 200;
-     
+    });  
   }
 
     
