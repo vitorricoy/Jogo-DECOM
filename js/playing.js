@@ -143,7 +143,7 @@ var gerada=false;
     		layer = map.createLayer('fundo');
         layer = map.createLayer('background');
     		layer = map.createLayer('ground');
-    		map.setCollisionBetween(0, 999, true, layer);
+    		map.setCollisionBetween(100, 2000, true, layer);
         layer.resizeWorld();
         spikes = game.add.group();
         spikes.enableBody=true;
