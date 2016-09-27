@@ -51,6 +51,9 @@ playing.prototype = {
           jump();
       }
       var elem1=players.getFirstAlive();
+      if(elem1==null){
+        game.state.start("gameover", level);
+      }
       var it=0;
       players.forEachAlive(function(pla) {
         if(pla!=elem1){
