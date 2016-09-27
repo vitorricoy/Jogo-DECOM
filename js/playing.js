@@ -182,9 +182,9 @@ var gerada=false;
         players.physicsBodyType = Phaser.Physics.ARCADE;
         let player;
         if(bits[index]==1){
-          player=game.add.sprite(0, 0, 'bit1');
+          player=game.add.sprite(0, 400, 'bit1');
         }else{
-          player=game.add.sprite(0, 0, 'bit0');
+          player=game.add.sprite(0, 400, 'bit0');
         }
         console.log(player);
         game.physics.arcade.enable(player);
