@@ -37,7 +37,7 @@ function shuffle(array) {
   	   console.log(levelsPossiveis[lvl-1]);
        var aux = shuffle(levelsPossiveis[lvl-1]);
        console.log(aux);
-       jsonData = Array(aux[3], aux[2], aux[1], aux[0]);
+       jsonData = Array(aux[3], aux[2], aux[1], aux[0], aux[4], aux[5]);
        var novArray;
        var controlx;
        for (var i = 1; i < jsonData.length; i++) {
@@ -64,6 +64,7 @@ function shuffle(array) {
                        jsonData[i].layers[j].objects[x].x+=4000*i;
                        jsonData[i].layers[j].objects[x].id+=20*i;
                     }
+                    console.log(jsonData[i].layers[j]);
                     novArray=jsonData[0].layers[j].objects.concat(jsonData[i].layers[j].objects);
                     jsonData[0].layers[j].objects=novArray;
                     jsonData[0].layers[j].width+=jsonData[i].layers[j].width;
