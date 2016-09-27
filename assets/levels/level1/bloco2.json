@@ -22,43 +22,7 @@
          "x":0,
          "y":0
         }, 
-        {
-         "draworder":"topdown",
-         "height":0,
-         "name":"bits",
-         "objects":[
-                {
-                 "gid":2,
-                 "height":16,
-                 "id":6,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":882,
-                 "y":300
-                }, 
-                {
-                 "gid":2,
-                 "height":16,
-                 "id":9,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1920,
-                 "y":573
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "width":0,
-         "x":0,
-         "y":0
-        }, 
-        {
+		{
          "draworder":"topdown",
          "height":0,
          "name":"virus",
@@ -122,15 +86,8 @@
                  "width":16,
                  "x":3810,
                  "y":70
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "width":0,
-         "x":0,
-         "y":0
-        }, 
-        {
+          },
+		  {
          "draworder":"topdown",
          "height":0,
          "name":"spikes",
@@ -141,7 +98,51 @@
          "width":0,
          "x":0,
          "y":0
+        },
+		  {
+         "draworder":"topdown",
+         "height":0,
+         "name":"bits",
+         "objects":[
+                {
+                 "gid":2,
+                 "height":16,
+                 "id":6,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":882,
+                 "y":300
+                }, 
+                {
+                 "gid":2,
+                 "height":16,
+                 "id":9,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1920,
+                 "y":573
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":0,
+         "x":0,
+         "y":0
         }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":0,
+         "x":0,
+         "y":0
+        }, 
+        ],
  "nextobjectid":10,
  "orientation":"orthogonal",
  "renderorder":"right-down",
