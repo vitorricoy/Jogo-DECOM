@@ -126,7 +126,6 @@ var gerada=false;
      sprite.animations.add('show', Phaser.Animation.generateFrameNames('Show_', 0, 3, '.png'), 2);
      sprite.animations.add('jump', ['Jump.png'], 1);
      players.add(sprite);
-     jumpTimer.push(0);
      presentes[i]=true;
      sprite.animations.play('show');
      bit.kill();
