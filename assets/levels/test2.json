@@ -1,0 +1,35 @@
+{ "height":2,
+ "layers":[
+        {
+         "data":[2991, 0, 0, 0],
+         "height":2,
+         "name":"Camada de Tiles 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":2,
+         "x":0,
+         "y":0
+        }],
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tileheight":30,
+ "tilesets":[
+        {
+         "columns":166,
+         "firstgid":1,
+         "image":"block0.png",
+         "imageheight":600,
+         "imagewidth":5000,
+         "margin":0,
+         "name":"block0",
+         "spacing":0,
+         "tilecount":3320,
+         "tileheight":30,
+         "tilewidth":30
+        }],
+ "tilewidth":30,
+ "version":1,
+ "width":2
+}
