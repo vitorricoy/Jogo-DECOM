@@ -96,8 +96,8 @@
   <object id="6" gid="1" x="3013" y="165" width="16" height="16"/>
   <object id="7" gid="1" x="3565" y="326" width="16" height="16"/>
  </objectgroup>
+ <objectgroup name="spikes"/>
  <objectgroup name="bits">
   <object id="9" gid="2" x="2138" y="547" width="16" height="16"/>
  </objectgroup>
- <objectgroup name="spikes"/>
 </map>

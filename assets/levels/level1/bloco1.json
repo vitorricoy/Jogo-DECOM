@@ -118,7 +118,7 @@
          "x":0,
          "y":0
         }, 
-		{
+        {
          "draworder":"topdown",
          "height":0,
          "name":"spikes",
@@ -129,7 +129,7 @@
          "width":0,
          "x":0,
          "y":0
-        },
+        }, 
         {
          "draworder":"topdown",
          "height":0,
@@ -153,8 +153,7 @@
          "width":0,
          "x":0,
          "y":0
-        } 
-        ],
+        }],
  "nextobjectid":10,
  "orientation":"orthogonal",
  "renderorder":"right-down",
