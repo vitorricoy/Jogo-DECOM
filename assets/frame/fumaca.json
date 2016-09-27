@@ -1,0 +1,44 @@
+{"frames": {
+
+"smoke0.png":
+{
+	"frame": {"x":334,"y":1,"w":78,"h":79},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":16,"y":16,"w":78,"h":79},
+	"sourceSize": {"w":110,"h":108}
+},
+"smoke1.png":
+{
+	"frame": {"x":225,"y":1,"w":107,"h":108},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":108},
+	"sourceSize": {"w":110,"h":108}
+},
+"smoke2.png":
+{
+	"frame": {"x":1,"y":1,"w":110,"h":108},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":110,"h":108},
+	"sourceSize": {"w":110,"h":108}
+},
+"smoke3.png":
+{
+	"frame": {"x":113,"y":1,"w":110,"h":108},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":110,"h":108},
+	"sourceSize": {"w":110,"h":108}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "fumaca.png",
+	"format": "RGBA8888",
+	"size": {"w":413,"h":110},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e5216c5d99c3e1ab5270f32cb981d8a3:8a305e2deebe7fcc8d45f4363ab23bf0:65aa150f3ae4d35fac5a35d226c02a1d$"
+}
+}
