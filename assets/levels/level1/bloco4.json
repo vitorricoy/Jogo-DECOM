@@ -39,7 +39,7 @@
          "name":"virus",
          "objects":[
                 {
-                 "gid":1518,
+                 "gid":1,
                  "height":16,
                  "id":2,
                  "name":"",
@@ -51,7 +51,7 @@
                  "y":370
                 }, 
                 {
-                 "gid":1518,
+                 "gid":1,
                  "height":16,
                  "id":3,
                  "name":"",
@@ -63,7 +63,7 @@
                  "y":428
                 }, 
                 {
-                 "gid":1518,
+                 "gid":1,
                  "height":16,
                  "id":4,
                  "name":"",
@@ -99,7 +99,7 @@
          "name":"bits",
          "objects":[
                 {
-                 "gid":1518,
+                 "gid":2,
                  "height":16,
                  "id":1,
                  "name":"",
