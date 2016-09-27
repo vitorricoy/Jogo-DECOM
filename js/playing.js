@@ -87,7 +87,7 @@ playing.prototype = {
         }else{
           players.children[0].animations.stop(null, true);
         }
-        players.children[0].body.velocity.x=300;
+        players.children[0].body.velocity.x=250;
       if(players.children[0].y>600){
           players.children[0].kill();
           presentes[0]=false;
@@ -117,7 +117,7 @@ var gerada=false;
      sprite.body.gravity.y = 500;
      console.log(game.time.now);
      console.log(sprite.body.velocity.y = -502/2);
-     console.log(sprite.body.velocity.x = (-1*52*i)+200);
+     console.log(sprite.body.velocity.x = (-1*52*i)+250);
      onJump[i]=true;
      sprite.animations.add('walk', Phaser.Animation.generateFrameNames('Walk_', 0, 6, '.png'), 10);
      sprite.animations.add('show', Phaser.Animation.generateFrameNames('Show_', 0, 3, '.png'), 2);
