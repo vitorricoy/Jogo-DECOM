@@ -4,8 +4,11 @@ function Preload(){}
 Preload.prototype = {
   preload: function() {
     for(let i=0; i<6; i++){
-      for(let f=0; f<=3; f++){
-         $.getJSON( "assets/levels/level"+(eval(i+1))+"/bloco"+f+ ".json", function( data ) { levelsPossiveis[i].push(data);});
+      for(let f=0; f<6; f++){
+         $.getJSON( "assets/levels/level"+(eval(i+1))+"/bloco"+f+ ".json", function( data ) { 
+          if(f==0)
+            console.log(data);
+          levelsPossiveis[i][f]=data;});
       }
     }
     game.load.atlasJSONHash('animFundo', 'assets/frame/fundo.png', 'assets/frame/fundo.json');
@@ -29,7 +32,7 @@ Preload.prototype = {
     game.load.atlasJSONHash('virus', 'assets/frame/Virus/Virus.png', 'assets/frame/Virus/Virus.json');
     game.load.atlasJSONHash('collect', 'assets/frame/collect.png', 'assets/frame/collect.json');
     game.load.atlasJSONHash('fumaca', 'assets/frame/fumaca.png', 'assets/frame/fumaca.json');
-    game.load.image('spike', 'assets/frame/Spike/spike.png');
+    game.load.image('spike', 'assets/frame/Spike/Spike.png');
     //game.load.spritesheet('walk1', 'assets/frame/walk1.png', 56, 146, 7);
     game.physics.startSystem(Phaser.Physics.ARCADE);
   },

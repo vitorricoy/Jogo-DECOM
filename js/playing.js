@@ -136,6 +136,7 @@ var gerada=false;
      var fum=game.add.sprite(player.x+100, player.y, 'fumaca');
      fum.animations.add('play');
      fum.animations.play('play', 2, false);
+     fum.animations.currentAnim.onComplete.add(function () { fum.destroy();}, this);
   }
 	function definirJogo(){
 		if(!gerada){
@@ -216,7 +217,7 @@ var gerada=false;
     let cont=0;
     players.forEach(function(player) {
       if(player.body.onFloor() && game.time.now > jumpTimerAll){
-         setTimeout(function(){ player.body.velocity.y = -300; }, 200*cont);
+         setTimeout(function(){ player.body.velocity.y = -300; }, 300*cont);
       }
       cont++;
     });

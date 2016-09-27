@@ -34,12 +34,10 @@ function shuffle(array) {
   }
 
   function gerarLevel(){
-       let aux = shuffle(levelsPossiveis[lvl-1]);
-       let levelSelec = Array(aux[3], aux[2], aux[1], aux[0]);
-       for(let f=0; f<levelSelec.length; f++){
-          console.log(levelSelec[f]);
-          jsonData[f]=levelSelec[f];
-       }
+  	   console.log(levelsPossiveis[lvl-1]);
+       var aux = shuffle(levelsPossiveis[lvl-1]);
+       console.log(aux);
+       jsonData = Array(aux[3], aux[2], aux[1], aux[0]);
        var novArray;
        var controlx;
        for (var i = 1; i < jsonData.length; i++) {
@@ -51,14 +49,10 @@ function shuffle(array) {
               for(let x=0; x<jsonData[i].layers[j].data.length; x+=jsonData[i].layers[j].width){
                   var auxi=Array();
                   auxi=jsonData[0].layers[j].data.slice(controlx, controlx+(jsonData[0].layers[j].width));
-                  console.log("Slice auxi: "+auxi);
                   var aux2=jsonData[i].layers[j].data.slice(x, x+jsonData[i].layers[j].width);
-                  console.log("Aux2: " + aux2);
                   auxi=auxi.concat(aux2);
-                  console.log("Concate auxi: " + auxi);
                   novArray=novArray.concat(auxi);
                   controlx+=jsonData[0].layers[j].width;
-                  console.log("Novo Array: " + novArray);
               }
               jsonData[0].layers[j].data=novArray;
               jsonData[0].layers[j].width+=jsonData[i].layers[j].width;
@@ -67,7 +61,8 @@ function shuffle(array) {
               if(jsonData[i].layers[j].objects!=undefined){
                     var auxi=Array();
                     for(let x=0; x<jsonData[i].layers[j].objects.length; x++){
-                       jsonData[i].layers[j].objects[x].x+=1620*i;
+                       jsonData[i].layers[j].objects[x].x+=4000*i;
+                       jsonData[i].layers[j].objects[x].id+=20*i;
                     }
                     novArray=jsonData[0].layers[j].objects.concat(jsonData[i].layers[j].objects);
                     jsonData[0].layers[j].objects=novArray;
