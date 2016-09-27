@@ -23,9 +23,7 @@ playing.prototype = {
   update: function(){
     definirJogo();
 	  game.physics.arcade.collide(players, layer);
-    game.physics.arcade.collide(grpBits, layer);  
-    game.physics.arcade.collide(virus, layer);
-    game.physics.arcade.collide(spikes, layer);    	
+    game.physics.arcade.collide(virus, layer);  	
     game.physics.arcade.overlap(players, grpBits, encostouBit, null, this);
     game.physics.arcade.overlap(players, spikes, encostouInimigo, null, this);
     game.physics.arcade.overlap(players, virus, encostouInimigo, null, this);
@@ -38,7 +36,7 @@ playing.prototype = {
       game.state.start('gameover', true, false, level);
     }else{
          let j;
-         for(j=0; j<presentes; j++){
+         for(j=0; j<8; j++){
             if(!presentes[j]){
               break;
             }
