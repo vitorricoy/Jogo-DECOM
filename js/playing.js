@@ -216,12 +216,12 @@ var gerada=false;
     let cont=0;
     players.forEach(function(player) {
       if(player.body.onFloor() && game.time.now > jumpTimerAll){
-         setTimeout(function(){ player.body.velocity.y = -300; }, 200*cont);
+         setTimeout(function(){ player.body.velocity.y = -250; }, 200*cont);
       }
       cont++;
     });
      
-    jumpTimerAll = game.time.now + 300;
+    jumpTimerAll = game.time.now + 200;
      
   }
 
