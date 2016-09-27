@@ -142,7 +142,8 @@ var gerada=false;
 		if(!gerada){
     		map = game.add.tilemap('levelGer'+cont++, 30, 30)
     		map.addTilesetImage('tileset', 'tile1');
-    		layer = map.createLayer('background');
+    		layer = map.createLayer('fundo');
+        layer = map.createLayer('background');
     		layer = map.createLayer('ground');
     		map.setCollisionBetween(0, 999, true, layer);
         layer.resizeWorld();
