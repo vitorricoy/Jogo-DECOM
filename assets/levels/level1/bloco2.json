@@ -41,50 +41,14 @@
                 {
                  "gid":1,
                  "height":16,
-                 "id":1,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":240,
-                 "y":405.333333333333
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
                  "id":2,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":540,
-                 "y":107.999666666667
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
-                 "id":4,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":2465.33666666667,
-                 "y":494.666333333333
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
-                 "id":5,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":3806.67,
-                 "y":215.999666666667
+                 "x":515,
+                 "y":548.999666666667
                 }],
          "opacity":1,
          "type":"objectgroup",

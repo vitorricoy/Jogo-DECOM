@@ -41,42 +41,6 @@
                 {
                  "gid":1,
                  "height":16,
-                 "id":1,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":350,
-                 "y":574
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
-                 "id":2,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":899,
-                 "y":483
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
-                 "id":3,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1109,
-                 "y":292
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
                  "id":5,
                  "name":"",
                  "rotation":0,
@@ -89,18 +53,6 @@
                 {
                  "gid":1,
                  "height":16,
-                 "id":6,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":2190,
-                 "y":575
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
                  "id":7,
                  "name":"",
                  "rotation":0,
@@ -109,18 +61,6 @@
                  "width":16,
                  "x":2609,
                  "y":172
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
-                 "id":8,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":3199,
-                 "y":430
                 }, 
                 {
                  "gid":1,

@@ -65,18 +65,6 @@
                 {
                  "gid":1,
                  "height":16,
-                 "id":3,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":2144,
-                 "y":122
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
                  "id":4,
                  "name":"",
                  "rotation":0,
@@ -85,18 +73,6 @@
                  "width":16,
                  "x":2635,
                  "y":480
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
-                 "id":5,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":3810,
-                 "y":70
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -131,8 +107,8 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":786,
-                 "y":241
+                 "x":781,
+                 "y":418
                 }, 
                 {
                  "gid":2,

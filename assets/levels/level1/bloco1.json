@@ -41,26 +41,14 @@
                 {
                  "gid":1,
                  "height":16,
-                 "id":1,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":300,
-                 "y":415
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
                  "id":2,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":535,
-                 "y":114
+                 "x":569,
+                 "y":521
                 }, 
                 {
                  "gid":1,
@@ -73,18 +61,6 @@
                  "width":16,
                  "x":1278,
                  "y":480
-                }, 
-                {
-                 "gid":1,
-                 "height":16,
-                 "id":4,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1943,
-                 "y":415
                 }, 
                 {
                  "gid":1,
