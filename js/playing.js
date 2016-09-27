@@ -88,9 +88,9 @@ playing.prototype = {
               pla.animations.stop(null, true);
         }
         pla.body.velocity.x=250;
-        if(players.children[0].y>600){
-          players.children[0].kill();
-          presentes[0]=false;
+        if(pla.y>600){
+          pla.kill();
+          presentes[it]=false;
         }
       }
       it++;
