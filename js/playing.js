@@ -111,37 +111,46 @@ playing.prototype = {
               onJump[it]=false;
             }
           }else{
+            pla.body.velocity.x=elem1.body.velocity.x;
           if(!pla.body.blocked.right && !pla.body.touching.right && pla.body.velocity.x>0){
             if(pla.body.onFloor())
                pla.animations.play('walk');
             else{
                pla.animations.play('jump');
             }  
+            
           }else{
               pla.animations.play('walk');
               pla.animations.stop(null, true);
           }
-          pla.body.velocity.x=elem1.body.velocity.x;
+          
           if(pla.y>600){
             pla.kill();
             bits[it]=false;
           }
         }
       }else{
-        if(!pla.body.blocked.right && !pla.body.touching.right && pla.body.velocity.x>0){
+        if(!pla.body.blocked.right && !pla.body.touching.right &&  pla.body.velocity.x>0){
             if(pla.body.onFloor())
                pla.animations.play('walk');
             else{
                pla.animations.play('jump');
             }  
+           
         }else{
           pla.animations.play('walk');
-              pla.animations.stop(null, true);
+          pla.animations.stop(null, true);
         }
-        pla.body.velocity.x=250;
+         elem1.body.velocity.x=250;
         if(pla.y>600){
           pla.kill();
-          bits[it]=false;
+          var i;
+          for(i=0; i<8; i++){
+            if(!bits[i]){
+              break;
+            }
+          }
+          bits[i]=false;
         }
       }
       it++;
@@ -185,6 +194,13 @@ playing.prototype = {
         if(players.children[i]==player)
           break;
      }
+     if(i==0){
+        for(i=0; i<8; i++){
+          if(!bits[i]){
+            break;
+          }
+        }
+     }
      bits[i]=false;
      inim.destroy();
      var fum=game.add.sprite(player.x+20, player.y, 'fumaca');
@@ -194,9 +210,9 @@ playing.prototype = {
   }
   function jump(){
     let cont=0;
-    players.forEach(function(player) {
+    players.forEachAlive(function(player) {
       if(player.body.onFloor()){
-         setTimeout(function(){ player.body.velocity.y = -300; }, 300*cont);
+         setTimeout(function(){ if(player.body.onFloor()) player.body.velocity.y = -300; }, 300*cont);
       }
       cont++;
     });  
