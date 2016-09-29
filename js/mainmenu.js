@@ -5,6 +5,7 @@ mainmenu.prototype = {
   preload: function(){
     slickUI = game.plugins.add(Phaser.Plugin.SlickUI);
     slickUI.load('assets/kenney/kenney.json');
+    game.forceSingleUpdate = true;
   },
   create: function() {
     slickUI.add(panelMenu = new SlickUI.Element.Panel(0, 0, game.width, game.height));
