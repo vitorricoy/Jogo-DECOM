@@ -11,6 +11,7 @@
     <saved-with-version>23300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -20,8 +21,6 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -29,8 +28,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>630</width>
-        <height>360</height>
+        <width>1024</width>
+        <height>720</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -48,23 +47,10 @@
     <object-folder>
         <object-type name="Block" sid="208682157891759">
             <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Solid" sid="774414066834235">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Bullet" sid="811434529993185">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
             <texture />
         </object-type>
         <object-type name="Player" sid="353606484238091">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="181185934823540">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288311144242287" speed="5">
                     <frame duration="1" hotspotX="0.514286" hotspotY="0.512821" />
@@ -106,33 +92,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777531206645265" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\fundo.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Virus" sid="252827236745825">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894743584871575" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Virus2" sid="445220670866682">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="300268093284342" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1.32857" original-source="C:\xampp\htdocs\assets\frame\Virus\Virus.png">
-                        <collision-poly>
-                            <point x="0.125" y="0.142857" />
-                            <point x="0.5" y="0.00714286" />
-                            <point x="0.875" y="0.142857" />
-                            <point x="0.7125" y="1" />
-                            <point x="0.75" y="1" />
-                            <point x="0.5" y="1" />
-                            <point x="0.05625" y="1" />
-                            <point x="0.1875" y="1" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -199,19 +158,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Camera" sid="485308130721595">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="198923526911846">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990988196776639" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\Camera.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Bit1" sid="257060109210337">
             <plugin id="Sprite" />
             <behaviors>
@@ -221,7 +167,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="597601356943630" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\bit1\Jump.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\bit0\Jump.png">
                         <collision-poly>
                             <point x="0.375" y="0.285714" />
                             <point x="0.5" y="0" />
@@ -288,8 +234,8 @@
         <object-type name="Show_" sid="619439761459238">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="CustomMovement" sid="129833104610326">
-                    <behavior id="custom" />
+                <behavior-type name="Solid" sid="893901786779490">
+                    <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -308,8 +254,110 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Array" sid="795556030900109">
+        <object-type global="1" name="Blocos" sid="795556030900109">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="Function" sid="701672920875598">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="folder" sid="522735555780387">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="229065839147097">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="105927763473552" speed="5">
+                    <frame duration="1" hotspotX="0.491525" hotspotY="0.521739" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\level1\folder.png">
+                        <collision-poly>
+                            <point x="0" y="1.14188e-008" />
+                            <point x="0.491525" y="1.14188e-008" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.983051" y="1" />
+                            <point x="0.491525" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pdf" sid="839957342852212">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="945271649037128">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769721945351222" speed="5">
+                    <frame duration="1" hotspotX="0.532258" hotspotY="0.508197" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\level1\pdf.png">
+                        <collision-poly>
+                            <point x="0.016129" y="0.0163934" />
+                            <point x="0.516129" y="0" />
+                            <point x="1" y="0.0327869" />
+                            <point x="1" y="0.491803" />
+                            <point x="0.967742" y="1" />
+                            <point x="0.516129" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.52459" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt" sid="790294262518968">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="231297890988664">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214557321260355" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508475" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\level1\txt.png">
+                        <collision-poly>
+                            <point x="0.0166667" y="0.0169492" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0333333" y="0.966102" />
+                            <point x="0" y="0.491525" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Virus" sid="758222141633940">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="633866618819681">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880021975381359" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\virus\Virus0.png">
+                        <collision-poly>
+                            <point x="0.120253" y="0.135714" />
+                            <point x="0.5" y="0" />
+                            <point x="0.879747" y="0.135714" />
+                            <point x="1" y="0.5" />
+                            <point x="0.917722" y="0.907143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0822785" y="0.907143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\virus\Virus1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\virus\Virus2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\umcan\Desktop\Jogo-DECOM\Files\virus\Virus1.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -326,6 +374,7 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="5" />
+        <global-instance type="Function" uid="275" />
     </global-instances>
     <sounds-folder />
     <music-folder />

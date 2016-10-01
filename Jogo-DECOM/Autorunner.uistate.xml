@@ -31,11 +31,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/chao/" />
         <folder expanded="1" path="animation-folder/fundo/" />
-        <folder expanded="1" path="animation-folder/Virus/" />
-        <folder expanded="1" path="animation-folder/Virus2/" />
         <folder expanded="1" path="animation-folder/Bit0/" />
-        <folder expanded="1" path="animation-folder/Camera/" />
         <folder expanded="1" path="animation-folder/Bit1/" />
         <folder expanded="1" path="animation-folder/Show_/" />
+        <folder expanded="1" path="animation-folder/folder/" />
+        <folder expanded="1" path="animation-folder/pdf/" />
+        <folder expanded="1" path="animation-folder/txt/" />
+        <folder expanded="1" path="animation-folder/Virus/" />
     </folders-expanded>
 </c2uistate>
