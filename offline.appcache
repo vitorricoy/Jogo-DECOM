@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1475879180
+#1475883528
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -32,6 +32,8 @@ images/letram-sheet0.png
 images/lvl-sheet0.png
 images/lvl-sheet1.png
 images/lvl-sheet2.png
+media/click.m4a
+media/click.ogg
 icon-16.png
 icon-32.png
 icon-114.png
