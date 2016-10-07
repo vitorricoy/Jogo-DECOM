@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1475850611
+#1475882263
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -17,6 +17,14 @@ images/portal-sheet0.png
 images/chao-sheet0.png
 images/folder-sheet0.png
 images/pdf-sheet0.png
+media/collect.m4a
+media/collect.ogg
+media/die.m4a
+media/die.ogg
+media/game_over.m4a
+media/game_over.ogg
+media/jump.m4a
+media/jump.ogg
 icon-16.png
 icon-32.png
 icon-114.png

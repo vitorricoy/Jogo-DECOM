@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1475850647
+#1475882248
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -20,6 +20,14 @@ images/virus_shutdown-sheet0.png
 images/virus_shutdown-sheet1.png
 images/virus_trojan-sheet0.png
 images/portal-sheet0.png
+media/collect.m4a
+media/collect.ogg
+media/die.m4a
+media/die.ogg
+media/game_over.m4a
+media/game_over.ogg
+media/jump.m4a
+media/jump.ogg
 icon-16.png
 icon-32.png
 icon-114.png
