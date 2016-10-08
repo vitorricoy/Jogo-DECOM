@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1475882196
+#1475885636
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -18,6 +18,9 @@ images/scroller-sheet0.png
 images/botao_pause-sheet0.png
 images/fumaca-sheet0.png
 images/portal-sheet0.png
+images/letrad-sheet0.png
+images/background-sheet0.png
+images/menubtn-sheet0.png
 media/collect.m4a
 media/collect.ogg
 media/die.m4a
@@ -26,6 +29,8 @@ media/game_over.m4a
 media/game_over.ogg
 media/jump.m4a
 media/jump.ogg
+media/click.m4a
+media/click.ogg
 icon-16.png
 icon-32.png
 icon-114.png
