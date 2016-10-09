@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1475976334
+#1475984448
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -32,5 +32,6 @@ media/collect.ogg
 media/die.ogg
 media/game_over.ogg
 media/jump.ogg
+media/back.ogg
 NETWORK:
 *
